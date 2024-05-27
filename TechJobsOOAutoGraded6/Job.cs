@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
 namespace TechJobsOOAutoGraded6
 {
 	public class Job
@@ -40,7 +42,27 @@ namespace TechJobsOOAutoGraded6
         }
         // TODO: Task 5: Generate custom ToString() method.
         //Until you create this method, you will not be able to print a job to the console.
+        public override string ToString()
+        {
+            string nl = Environment.NewLine;
+            string message = "Data not avaliable";
+            StringBuilder output = new StringBuilder();
+            string a = Name != null ? Name : message;
+            string b = EmployerName != null ? EmployerName.ToString() : message;
+            string c = EmployerLocation != null ? EmployerLocation.ToString() : message;
+            string d = JobType != null ? JobType.ToString() : message;
+            string e = JobCoreCompetency != null ? JobCoreCompetency.ToString() : message;
+            output.Append(nl);
+            output.AppendLine($"ID: {Id}");
+            output.AppendLine($"Name: {a}");
+            output.AppendLine($"Employer: {b}");
+            output.AppendLine($"Location: {c}");
+            output.AppendLine($"Position Type: {d}");
+            output.Append($"Core Competency: {e}");
+
+            return output + nl;
 
     }
+}
 }
 

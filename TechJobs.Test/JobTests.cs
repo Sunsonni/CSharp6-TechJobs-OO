@@ -34,6 +34,34 @@ namespace TechJobs.Tests
         {
             Assert.IsFalse(job1.Equals(job3));
         }
+
+        //ToString() Test Methods
+        [TestMethod]
+        public void TestToStringStartsAndEndsWithNewLine()
+        {
+            string nl = Environment.NewLine;
+            string jobString = job1.ToString();
+            Assert.IsTrue(jobString.StartsWith(nl));
+            Assert.IsTrue(jobString.EndsWith(nl));
+        }
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            string jobString = job3.ToString();
+            string text = System.IO.File.ReadAllText("/Users/sonnienguyen/Desktop/LaunchCode/TechJobsOO/CSharp6-TechJobs-OO/TechJobs.Test/ToStringFilledTest.txt");
+
+            Assert.AreEqual(text, jobString);
+            Console.WriteLine(jobString);
+        }
+        [TestMethod]
+        public void TestToStringHandlesEmptyField()
+        {
+            string jobString = job1.ToString();
+            string text = System.IO.File.ReadAllText("/Users/sonnienguyen/Desktop/LaunchCode/TechJobsOO/CSharp6-TechJobs-OO/TechJobs.Test/ToStringTest.txt");
+
+            Assert.AreEqual(text, jobString);
+            Console.WriteLine(jobString);
+        }
     }
 }
 

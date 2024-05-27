@@ -1,4 +1,6 @@
 ﻿
+using TechJobs.Tests;
+
 namespace TechJobsOO.Tests
 {
 	[TestClass]
@@ -8,7 +10,6 @@ namespace TechJobsOO.Tests
         //Uses jobs from the Job class.
         //Tests are numbered.
 
-        /*TODO: Task 5: Remove this line to uncomment the tests
 
         //Unit Test 1:  TestToStringStartsAndEndsWithNewLine  -----------------------
 
@@ -45,12 +46,13 @@ namespace TechJobsOO.Tests
             //id numbers may get a little wonky
 
             //setup
-            string text = System.IO.File.ReadAllText("StartsAndEndsWithNewLine.txt").ToString();
+            string text = System.IO.File.ReadAllText("/Users/sonnienguyen/Desktop/LaunchCode/TechJobsOO/CSharp6-TechJobs-OO/TechJobsOO.Tests/StartsAndEndsWithNewLine.txt").ToString();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
             var job = new RunTechJobs();
             job.RunProgram();
             var output = stringWriter.ToString();
+            Console.WriteLine(output);
 
             //verify
             Assert.AreEqual(text, output, "New Line issue");
@@ -135,7 +137,7 @@ namespace TechJobsOO.Tests
             //comparing output to a text file.
             //id numbers may get a little wonky
 
-            string text = System.IO.File.ReadAllText("EmptyFieldTest.txt").ToString();
+            string text = System.IO.File.ReadAllText("/Users/sonnienguyen/Desktop/LaunchCode/TechJobsOO/CSharp6-TechJobs-OO/TechJobsOO.Tests/EmptyFieldTest.txt").ToString();
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
             var job = new RunTechJobs();
@@ -145,7 +147,6 @@ namespace TechJobsOO.Tests
             //verify
             Assert.AreEqual(text, output, "Empty string handling error");
         }
-        TODO: Task 5: Remove this line to uncomment the tests*/
 
     }
 
