@@ -1,7 +1,0 @@
-
-ID: 9
-Name: Data not avaliable
-Employer: Data not avaliable
-Location: Data not avaliable
-Position Type: Data not avaliable
-Core Competency: Data not avaliable

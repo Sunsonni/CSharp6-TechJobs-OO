@@ -1,7 +1,0 @@
-
-ID: 3
-Name: Product tester
-Employer: ACME
-Location: Desert
-Position Type: Quality control
-Core Competency: Persistence

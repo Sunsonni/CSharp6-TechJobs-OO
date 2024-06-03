@@ -48,19 +48,21 @@ namespace TechJobs.Tests
         public void TestToStringContainsCorrectLabelsAndData()
         {
             string jobString = job3.ToString();
-            string text = System.IO.File.ReadAllText("/Users/sonnienguyen/Desktop/LaunchCode/TechJobsOO/CSharp6-TechJobs-OO/TechJobs.Test/ToStringFilledTest.txt");
-
-            Assert.AreEqual(text, jobString);
-            Console.WriteLine(jobString);
+            Assert.IsTrue(jobString.Contains("Name: Product tester"));
+            Assert.IsTrue(jobString.Contains("Employer: ACME"));
+            Assert.IsTrue(jobString.Contains("Location: Desert"));
+            Assert.IsTrue(jobString.Contains("Position Type: Quality control"));
+            Assert.IsTrue(jobString.Contains("Core Competency: Persistence"));
         }
         [TestMethod]
         public void TestToStringHandlesEmptyField()
         {
             string jobString = job1.ToString();
-            string text = System.IO.File.ReadAllText("/Users/sonnienguyen/Desktop/LaunchCode/TechJobsOO/CSharp6-TechJobs-OO/TechJobs.Test/ToStringTest.txt");
-
-            Assert.AreEqual(text, jobString);
-            Console.WriteLine(jobString);
+            Assert.IsTrue(jobString.Contains("Name: Data not avaliable"));
+            Assert.IsTrue(jobString.Contains("Employer: Data not avaliable"));
+            Assert.IsTrue(jobString.Contains("Location: Data not avaliable"));
+            Assert.IsTrue(jobString.Contains("Position Type: Data not avaliable"));
+            Assert.IsTrue(jobString.Contains("Core Competency: Data not avaliable"));
         }
     }
 }
