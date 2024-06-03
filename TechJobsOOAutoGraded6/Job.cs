@@ -45,7 +45,7 @@ namespace TechJobsOOAutoGraded6
         public override string ToString()
         {
             string nl = Environment.NewLine;
-            string message = "Data not avaliable";
+            string message = "Data not available";
             StringBuilder output = new StringBuilder();
             string a = Name != null || Name == "" ? Name : message;
             string b = EmployerName == null|| EmployerName.ToString() == ""? message : EmployerName.ToString() ;

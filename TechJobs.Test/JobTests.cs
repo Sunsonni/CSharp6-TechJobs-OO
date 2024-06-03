@@ -58,11 +58,11 @@ namespace TechJobs.Tests
         public void TestToStringHandlesEmptyField()
         {
             string jobString = job1.ToString();
-            Assert.IsTrue(jobString.Contains("Name: Data not avaliable"));
-            Assert.IsTrue(jobString.Contains("Employer: Data not avaliable"));
-            Assert.IsTrue(jobString.Contains("Location: Data not avaliable"));
-            Assert.IsTrue(jobString.Contains("Position Type: Data not avaliable"));
-            Assert.IsTrue(jobString.Contains("Core Competency: Data not avaliable"));
+            Assert.IsTrue(jobString.Contains("Name: Data not available"));
+            Assert.IsTrue(jobString.Contains("Employer: Data not available"));
+            Assert.IsTrue(jobString.Contains("Location: Data not available"));
+            Assert.IsTrue(jobString.Contains("Position Type: Data not available"));
+            Assert.IsTrue(jobString.Contains("Core Competency: Data not available"));
         }
     }
 }
