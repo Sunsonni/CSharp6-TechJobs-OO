@@ -47,11 +47,12 @@ namespace TechJobsOOAutoGraded6
             string nl = Environment.NewLine;
             string message = "Data not avaliable";
             StringBuilder output = new StringBuilder();
-            string a = Name != null ? Name : message;
-            string b = EmployerName != null ? EmployerName.ToString() : message;
-            string c = EmployerLocation != null ? EmployerLocation.ToString() : message;
-            string d = JobType != null ? JobType.ToString() : message;
-            string e = JobCoreCompetency != null ? JobCoreCompetency.ToString() : message;
+            string a = Name != null || Name == "" ? Name : message;
+            string b = EmployerName == null|| EmployerName.ToString() == ""? message : EmployerName.ToString() ;
+            string c = EmployerLocation == null || EmployerLocation.ToString() == ""? message : EmployerLocation.ToString();
+            string d = JobType == null || JobType.ToString() == ""? message : JobType.ToString() ;
+            string e = JobCoreCompetency == null || JobCoreCompetency.ToString() == ""?  message: JobCoreCompetency.ToString();
+
             output.Append(nl);
             output.AppendLine($"ID: {Id}");
             output.AppendLine($"Name: {a}");
